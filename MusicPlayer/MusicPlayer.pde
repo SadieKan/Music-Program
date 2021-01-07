@@ -12,10 +12,13 @@ AudioPlayer song1; //creates a playlist variable for: WAV, AIFF, AU, SND, and MP
 
 void setup() {
   fullScreen(); //landscape
-  minim = new Minim(this);
-  song1 = minim.loadFile("../Music/Simple - Patrick Patrikios.mp3"); //song1 is the name of the playlist //able to pass absolute path, file name, and URL //remember to add ".." fpr it to go out of the folder
-  song1.play();
+  minimSetup();
+  //
+  textSetup();
 }
 
 void draw() {
+}
+
+void mouseClicked() {
 }
