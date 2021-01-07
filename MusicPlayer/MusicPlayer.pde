@@ -20,6 +20,8 @@ void setup() {
 
 void draw() {
   quitButton();
+  leftColumn();
+  songPlaying(); //display for the current song that is playing
 }
 
 void keyPressed() {
