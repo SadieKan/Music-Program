@@ -21,6 +21,7 @@ void setup() {
 void draw() {
   quitButton();
   leftColumn();
+  musicPlayerButtonsDraw();
   songPlaying(); //display for the current song that is playing
 }
 

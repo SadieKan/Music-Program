@@ -1,5 +1,5 @@
 void quitButton() {
-//rect();
+  //rect();
 }
 
 void quitButtonMouseClicked() {

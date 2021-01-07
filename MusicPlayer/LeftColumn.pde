@@ -1,16 +1,26 @@
 void leftColumn() {
   /*
-  rect(); //Songs Heading
-  songHeadingText();
-  rect();
-  song1Text();
-  rect();
-  song2Text();
-  rect();
-  song3Text();
-  rect();
-  song4Text();
-  rect();
-  song5Text();
-  */
+  rect(); //Song Heading
+   songHeadingText();
+   //
+   rect();
+   song1Text();
+   image();
+   //
+   rect();
+   song2Text();
+   image();
+   //
+   rect();
+   song3Text();
+   image();
+   //
+   rect();
+   song4Text();
+   image();
+   //
+   rect();
+   song5Text();
+   image();
+   */
 }
