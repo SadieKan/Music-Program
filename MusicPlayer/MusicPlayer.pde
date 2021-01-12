@@ -1,3 +1,5 @@
+//Change the code for the buttons to function differently
+//randomize the numbers so that the playlist is random each time
 //Sketch //Import Library //Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -62,17 +64,41 @@ void keyPressed() {
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
-      currentSong++;
+      if (currentSong == numberOfSongs-1) {
+        currentSong = numberOfSongs - numberOfSongs;
+      } else {
+        currentSong++; //Adds 1 to the current song number
+      }
       song[currentSong].play();
     } else { 
       song[currentSong].rewind();
-      currentSong++;
+      if (currentSong == numberOfSongs-1) {
+        currentSong = numberOfSongs - numberOfSongs;
+      } else {
+        currentSong++;
+      }
     }
   }//End Next Button
   //
   //Previous Button (Backwards on Play List)
   if (key == 'b' || key == 'B') {
-    currentSong--;
+    if (song[currentSong].isPlaying()) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      if (currentSong == numberOfSongs - numberOfSongs) {
+        currentSong = numberOfSongs-1;
+      } else {
+        currentSong--; //Adds 1 to the current song number
+      }
+      song[currentSong].play();
+    } else { 
+      song[currentSong].rewind();
+      if (currentSong == numberOfSongs - numberOfSongs) {
+        currentSong = numberOfSongs-1;
+      } else {
+        currentSong--;
+      }
+    }
   }//End Previous Button
   //
 } //End keyPressed

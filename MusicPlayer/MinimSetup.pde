@@ -2,7 +2,7 @@ void minimSetup() {
   minim = new Minim(this); //Creates object in processing
   //Array variables based on operators to describe 0, 1, 2
   song[currentSong] = minim.loadFile("../Music/Glacier - Patrick Patrikios.mp3"); //song1 is the name of the playlist //able to pass absolute path, file name, and URL //remember to add ".." for it to go out of the folder
-  song[currentSong+=1] = minim.loadFile("../Music/Lens - Bobby Richards.mp3");
+  song[currentSong+=1] = minim.loadFile(https://open.spotify.com/track/0rKtyWc8bvkriBthvHKY8d?si=wB-5rIFBRRqOFynP5PZx1g);
   song[currentSong+=1] = minim.loadFile("../Music/Simple - Patrick Patrikios.mp3");
   //using pattern in FOR loop
   //
