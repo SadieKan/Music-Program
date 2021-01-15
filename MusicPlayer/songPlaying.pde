@@ -1,6 +1,9 @@
 void songPlaying() {
+  border();
+  fill(darkGray2);
   rect(rightColumnX, 0, rightColumnWidth, height);
   rect(songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
+  reset();
   /*
   if () {
    image();

@@ -4,6 +4,8 @@ void minimSetup() {
   song[currentSong] = minim.loadFile("../Music/Joji - SLOW DANCING IN THE DARK.mp3"); //song1 is the name of the playlist //able to pass absolute path, file name, and URL //remember to add ".." for it to go out of the folder
   song[currentSong+=1] = minim.loadFile("../Music/Jeremy Zucker - comethru (Official Video).mp3");
   song[currentSong+=1] = minim.loadFile("../Music/Khalid - Better (Official Video).mp3");
+  //
+  click = minim.loadFile("../Music/Mouse Click.mp3");
   //using pattern in FOR loop
   //
   currentSong = numberOfSongs - numberOfSongs;

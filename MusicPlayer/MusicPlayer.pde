@@ -13,9 +13,12 @@ Minim minim; //creates object to access all functions
 int numberOfSongs = 3;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //creates a playlist variable for: WAV, AIFF, AU, SND, and MP3
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; //meta data for the playlist
+AudioPlayer click;
 int loopIntNum = 1; //connect to variable button, increasing the loop number //loopIntNum+1 //loopIntNum+=
 int currentSong = numberOfSongs - numberOfSongs; //Formula based on previous variable //Computers start counting at 0
 //
+color black = #000000, white = #FFFFFF, lightGray, gray, darkGray, darkGray2;
+PFont buttonFont;
 int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeight, leftColumnHeaderHeight;
 int rightColumnX, rightColumnWidth, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight;
