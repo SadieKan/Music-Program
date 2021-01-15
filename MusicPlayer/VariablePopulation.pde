@@ -1,25 +1,22 @@
 void variablePopulation() {
   //Colours
   lightGray = #d1d7e0;
-  gray = #9692a0;
-  darkGray = #6d6a74;
-  darkGray2 = #2b2a2e;
-  
+  gray = #9094a0;
+  darkGray = #2b2a2e;
+  darkGray2 = #54575e;
+
   //Left Column
   leftColumnX = 0;
   leftColumnY = 0;
   leftColumnWidth = width*1/3;
   leftColumnHeight = height*11/60;
   leftColumnHeaderHeight = height*1/12;
-  //Song Boxes
   //Pictures
-  /*
-  pic1
-   pic2
-   pic3
-   pic4
-   pic5
-   */
+  pic1 = loadImage ("../Images/slowDancingInTheDark.jpg"); //Dimensions: 564 Width, 564 Height
+  pic2 = loadImage ("../Images/comeThru.jpg"); //Dimensions: 640 Width, 640 Height
+  pic3 = loadImage ("../Images/better.jpg"); //Dimensions: 564 Width, 564 Height
+  pic4 = loadImage ("../Images/lifeGoesOn.jpg"); //Dimensions: 564 Width, 564 Height
+  pic5 = loadImage ("../Images/stayHere.jpg"); //Dimensions: 564 Width, 564 Height
   //Boxes for Text
 
 

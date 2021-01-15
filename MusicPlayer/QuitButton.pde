@@ -7,12 +7,12 @@ void quitButton() {
     fill(lightGray);
     rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
     reset();
-    fill(darkGray2);
+    fill(darkGray);
     quitButtonText();
     reset();
   } else {
     border();
-    fill(darkGray2);
+    fill(darkGray);
     rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
     reset();
     fill(lightGray);

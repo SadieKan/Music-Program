@@ -9,6 +9,9 @@ void quitButtonText() {
 }
 
 void songHeadingText() {
+  textAlign (LEFT, CENTER);
+  textFont(buttonFont, 30);
+  text(songHeading, leftColumnX+leftColumnWidth/20, leftColumnY, leftColumnWidth, leftColumnHeaderHeight);
 }
 void song1Text() {
 }

@@ -10,7 +10,7 @@ import ddf.minim.ugens.*;
 
 //Global Variables
 Minim minim; //creates object to access all functions
-int numberOfSongs = 3;
+int numberOfSongs = 5;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //creates a playlist variable for: WAV, AIFF, AU, SND, and MP3
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; //meta data for the playlist
 AudioPlayer click;
@@ -22,6 +22,8 @@ PFont buttonFont;
 int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeight, leftColumnHeaderHeight;
 int rightColumnX, rightColumnWidth, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight;
+int imageX, imageWidth, imageHeight, image1Y;
+PImage pic1, pic2, pic3, pic4, pic5;
 
 void setup() {
   fullScreen(); //landscape
