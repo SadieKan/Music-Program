@@ -7,19 +7,19 @@ void songPlaying() {
   //
   if (currentSong == 0) {
    image(pic1, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
-   song1Text();
+   //song1Text();
    } else if (currentSong == 1) {
    image(pic2, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
-   song2Text();
+   //song2Text();
    } else if (currentSong == 2) {
    image(pic3, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
-   song3Text();
+   //song3Text();
    } else if (currentSong == 3) {
    image(pic4, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
-   song4Text();
+   //song4Text();
    } else if (currentSong == 4) {
    image(pic5, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
-   song5Text();
+   //song5Text();
    }
    //
    border();

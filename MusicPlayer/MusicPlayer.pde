@@ -13,7 +13,7 @@ Minim minim; //creates object to access all functions
 int numberOfSongs = 5;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //creates a playlist variable for: WAV, AIFF, AU, SND, and MP3
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; //meta data for the playlist
-AudioPlayer click;
+//AudioPlayer click;
 int loopIntNum = 1; //connect to variable button, increasing the loop number //loopIntNum+1 //loopIntNum+=
 int currentSong = numberOfSongs - numberOfSongs; //Formula based on previous variable //Computers start counting at 0
 //
@@ -45,5 +45,6 @@ void keyPressed() {
 
 void mouseClicked() {
   quitButtonMouseClicked();
+  leftColumnClicked();
   musicPlayerButtons();
 }
