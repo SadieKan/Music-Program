@@ -1,9 +1,10 @@
 void variablePopulation() {
   //Colours
-  lightGray = #d1d7e0;
-  gray = #9094a0;
-  darkGray = #2b2a2e;
-  darkGray2 = #54575e;
+  lightGray = #d0d5e2;
+  lightTeal = #829eae;
+  teal = #2f4550;
+  blueGray = #a2bdcc;
+  darkGray = #33393d;
 
   //Left Column
   leftColumnX = 0;
@@ -40,6 +41,11 @@ void variablePopulation() {
 void border() {
   strokeWeight(2);
   stroke(lightGray);
+}
+
+void border2() {
+  strokeWeight(2);
+  stroke(darkGray);
 }
 
 void reset() {

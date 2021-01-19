@@ -17,7 +17,7 @@ AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; //meta data for
 int loopIntNum = 1; //connect to variable button, increasing the loop number //loopIntNum+1 //loopIntNum+=
 int currentSong = numberOfSongs - numberOfSongs; //Formula based on previous variable //Computers start counting at 0
 //
-color black = #000000, white = #FFFFFF, lightGray, gray, darkGray, darkGray2;
+color black = #000000, white = #FFFFFF, lightGray, blueGray, lightTeal, teal, darkGray;
 PFont buttonFont;
 int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeight, leftColumnHeaderHeight;

@@ -3,12 +3,12 @@ String songHeading = "Songs:";
 
 void leftColumn() {
   //Main Boxes
-  border();
+  border2();
   rect(leftColumnX, leftColumnY, leftColumnWidth, height);
-  fill(darkGray2);
+  fill(lightTeal);
   rect(leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeaderHeight);
   fill(white);
-  fill(gray);
+  fill(blueGray);
   rect(leftColumnX, leftColumnY+height*5/60, leftColumnWidth, leftColumnHeight);
   rect(leftColumnX, leftColumnY+height*16/60, leftColumnWidth, leftColumnHeight);
   rect(leftColumnX, leftColumnY+height*27/60, leftColumnWidth, leftColumnHeight);
@@ -16,24 +16,46 @@ void leftColumn() {
   rect(leftColumnX, leftColumnY+height*49/60, leftColumnWidth, leftColumnHeight);
   reset();
   //Song Heading
+  fill(darkGray);
   songHeadingText();
+  reset();
   //
+  fill(darkGray);
   song1Text();
+  fill(teal);
+  song1Text2();
+  reset();
   image(pic1, leftColumnX, leftColumnY+height*1/12, leftColumnHeight, leftColumnHeight);
   //
-  //song2Text();
+  fill(darkGray);
+  song2Text();
+  fill(teal);
+  song2Text2();
+  reset();
   image(pic2, leftColumnX, leftColumnY+height*16/60, leftColumnHeight, leftColumnHeight);
   //
-  //song3Text();
+  fill(darkGray);
+  song3Text();
+  fill(teal);
+  song3Text2();
+  reset();
   image(pic3, leftColumnX, leftColumnY+height*27/60, leftColumnHeight, leftColumnHeight);
   //
-  //song4Text();
+  fill(darkGray);
+  song4Text();
+  fill(teal);
+  song4Text2();
+  reset();
   image(pic4, leftColumnX, leftColumnY+height*38/60, leftColumnHeight, leftColumnHeight);
   //
-  //song5Text();
+  fill(darkGray);
+  song5Text();
+  fill(teal);
+  song5Text2();
+  reset();
   image(pic5, leftColumnX, leftColumnY+height*49/60, leftColumnHeight, leftColumnHeight);
   //
-  border();
+  border2();
   line(0, 0, 0, height);
   line(0, leftColumnY+height*1/12, leftColumnWidth, leftColumnY+height*1/12);
   line(0, leftColumnY+height*16/60, leftColumnWidth, leftColumnY+height*16/60);
