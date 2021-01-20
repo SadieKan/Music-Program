@@ -17,7 +17,7 @@ void songPlaying() {
     image(pic5, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
   }
   songTitleText();
-  fill(teal);
+  fill(lightTeal);
   songArtistText();
   reset();
 

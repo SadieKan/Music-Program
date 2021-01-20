@@ -40,6 +40,8 @@ void variablePopulation() {
   backButton = loadImage ("../Images/backWhite.png"); //Dimensions: 300 Width, 300 Height
   shuffleButton = loadImage ("../Images/shuffleWhite.png"); //Dimensions: 300 Width, 300 Height
   loopButton = loadImage ("../Images/loopWhite.png"); //Dimensions: 300 Width, 300 Height
+  shuffleButton2 = loadImage ("../Images/shuffleTeal.png"); //Dimensions: 300 Width, 300 Height
+  loopButton2 = loadImage ("../Images/loopTeal.png"); //Dimensions: 300 Width, 300 Height
   //
   playPauseX = songPlayingX+songPlayingWidth*20/45;
   playPauseY = height*34/40;
@@ -55,6 +57,16 @@ void variablePopulation() {
   nextY = playPauseY;
   nextWidth = songPlayingWidth*5/45;
   nextHeight = nextWidth;
+  //
+  shuffleX = songPlayingX;
+  shuffleY = height*69/80;
+  shuffleWidth = songPlayingWidth*6/45;
+  shuffleHeight = songPlayingWidth*4/45;
+  //
+  loopX = songPlayingX+songPlayingWidth*39/45;
+  loopY = height*69/80;
+  loopWidth = songPlayingWidth*6/45;
+  loopHeight = songPlayingWidth*4/45;
 
 
   //Quit Button

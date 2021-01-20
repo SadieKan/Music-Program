@@ -9,6 +9,14 @@ void musicPlayerButtonsDraw() {
   //Forward + Back
   image(backButton, backX-songPlayingWidth/60, backY-songPlayingWidth*1/70, backWidth*32/25, backHeight*32/25);
   image(nextButton, nextX-songPlayingWidth/60, nextY-songPlayingWidth*1/70, nextWidth*32/25, nextHeight*32/25);
+
+  //shuffle
+  //rect(shuffleX, shuffleY, shuffleWidth, shuffleHeight);
+  image(shuffleButton, shuffleX-songPlayingWidth/50, shuffleY-songPlayingWidth*1/24, shuffleWidth*33/25, shuffleWidth*33/25);
+
+  //loop
+  //rect(loopX, loopY, loopWidth, loopHeight);
+  image(loopButton, loopX-songPlayingWidth/50, loopY-songPlayingWidth*1/26, loopWidth*32/25, loopWidth*32/25);
 }
 
 void musicPlayerButtons() {
@@ -67,5 +75,13 @@ void musicPlayerButtons() {
         currentSong++;
       }
     }
+  } 
+  if (mouseX>shuffleX && mouseX<shuffleX+shuffleWidth && mouseY>shuffleY && mouseY<shuffleY+shuffleHeight) {
+    click.play();
+    click.rewind();
+  }
+  if (mouseX>loopX && mouseX<loopX+loopWidth && mouseY>loopY && mouseY<loopY+loopHeight) {
+    click.play();
+    click.rewind();
   }
 }

@@ -1,5 +1,4 @@
 //Change the code for the buttons to function differently
-//randomize the numbers so that the playlist is random each time
 //Sketch //Import Library //Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -30,8 +29,8 @@ PFont buttonFont;
 int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeight, leftColumnHeaderHeight;
 int rightColumnX, rightColumnWidth, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight;
-int playPauseX, playPauseY, playPauseWidth, playPauseHeight, nextX, nextY, nextWidth, nextHeight, backX, backY, backWidth, backHeight;
-PImage pic1, pic2, pic3, pic4, pic5, rewindButton, forwardButton, playButton, pauseButton, nextButton, backButton, shuffleButton, loopButton;
+int playPauseX, playPauseY, playPauseWidth, playPauseHeight, nextX, nextY, nextWidth, nextHeight, backX, backY, backWidth, backHeight, shuffleX, shuffleY, shuffleWidth, shuffleHeight, loopX, loopY, loopWidth, loopHeight;
+PImage pic1, pic2, pic3, pic4, pic5, rewindButton, forwardButton, playButton, pauseButton, nextButton, backButton, shuffleButton, loopButton, shuffleButton2, loopButton2;
 
 void setup() {
   fullScreen(); //landscape
@@ -45,7 +44,7 @@ void draw() {
   songPlaying(); //display for the current song that is playing
   musicPlayerButtonsDraw();
   quitButton();
-  visualizer();
+  visualizer(); //circle
 }
 
 void keyPressed() {

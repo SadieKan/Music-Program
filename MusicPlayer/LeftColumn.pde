@@ -125,6 +125,7 @@ void leftColumnClicked() {
       currentSong = 0;
       song[currentSong].play();
     } else {
+      song[currentSong].rewind();
       currentSong = 0;
     }
   }
@@ -137,6 +138,7 @@ void leftColumnClicked() {
       currentSong = 1;
       song[currentSong].play();
     } else {
+      song[currentSong].rewind();
       currentSong = 1;
     }
   }
@@ -149,6 +151,7 @@ void leftColumnClicked() {
       currentSong = 2;
       song[currentSong].play();
     } else {
+      song[currentSong].rewind();
       currentSong = 2;
     }
   }
@@ -161,6 +164,7 @@ void leftColumnClicked() {
       currentSong = 3;
       song[currentSong].play();
     } else {
+      song[currentSong].rewind();
       currentSong = 3;
     }
   }
@@ -173,6 +177,7 @@ void leftColumnClicked() {
       currentSong = 4;
       song[currentSong].play();
     } else {
+      song[currentSong].rewind();
       currentSong = 4;
     }
   }
