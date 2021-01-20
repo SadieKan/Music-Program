@@ -18,7 +18,6 @@ void variablePopulation() {
   pic3 = loadImage ("../Images/better.jpg"); //Dimensions: 564 Width, 564 Height
   pic4 = loadImage ("../Images/lifeGoesOn.jpg"); //Dimensions: 564 Width, 564 Height
   pic5 = loadImage ("../Images/stayHere.jpg"); //Dimensions: 564 Width, 564 Height
-  //Boxes for Text
 
 
   //Right Column
@@ -29,6 +28,32 @@ void variablePopulation() {
   songPlayingY = height*1/9;
   songPlayingWidth = rightColumnWidth*2/4;
   songPlayingHeight = height*5/9;
+
+
+  //Music Controls
+  rewindButton = loadImage ("../Images/rewindWhite.png"); //Dimensions: 300 Width, 300 Height
+  forwardButton = loadImage ("../Images/forwardWhite.png"); //Dimensions: 300 Width, 300 Height
+  playButton = loadImage ("../Images/playWhite.png"); //Dimensions: 300 Width, 300 Height
+  pauseButton = loadImage ("../Images/pauseWhite.png"); //Dimensions: 300 Width, 300 Height
+  nextButton = loadImage ("../Images/nextWhite.png"); //Dimensions: 300 Width, 300 Height
+  backButton = loadImage ("../Images/backWhite.png"); //Dimensions: 300 Width, 300 Height
+  //
+  
+  //
+  playPauseX = songPlayingX+songPlayingWidth*20/45;
+  playPauseY = height*34/40;
+  playPauseWidth = songPlayingWidth*5/45;
+  playPauseHeight = playPauseWidth;
+  //
+  backX = songPlayingX+songPlayingWidth*11/45;
+  backY = playPauseY;
+  backWidth = songPlayingWidth*5/45;
+  backHeight = backWidth;
+  //
+  nextX = songPlayingX+songPlayingWidth*29/45;
+  nextY = playPauseY;
+  nextWidth = songPlayingWidth*5/45;
+  nextHeight = nextWidth;
 
 
   //Quit Button

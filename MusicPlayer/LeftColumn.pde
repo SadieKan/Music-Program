@@ -66,6 +66,7 @@ void leftColumn() {
   reset();
 }
 
+
 void leftColumnClicked() {
   if (mouseX>leftColumnX && mouseX<leftColumnX+leftColumnWidth && mouseY>leftColumnY+height*5/60 && mouseY<leftColumnY+height*5/60+leftColumnHeight) {
     if (song[currentSong].isPlaying()) {

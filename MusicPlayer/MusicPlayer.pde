@@ -22,8 +22,8 @@ PFont buttonFont;
 int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeight, leftColumnHeaderHeight;
 int rightColumnX, rightColumnWidth, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight;
-int imageX, imageWidth, imageHeight, image1Y;
-PImage pic1, pic2, pic3, pic4, pic5;
+int playPauseX, playPauseY, playPauseWidth, playPauseHeight, nextX, nextY, nextWidth, nextHeight, backX, backY, backWidth, backHeight;
+PImage pic1, pic2, pic3, pic4, pic5, rewindButton, forwardButton, playButton, pauseButton, nextButton, backButton;
 
 void setup() {
   fullScreen(); //landscape
@@ -34,8 +34,8 @@ void setup() {
 
 void draw() {
   leftColumn();
-  musicPlayerButtonsDraw();
   songPlaying(); //display for the current song that is playing
+  musicPlayerButtonsDraw();
   quitButton();
 }
 
