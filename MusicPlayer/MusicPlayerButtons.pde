@@ -13,6 +13,8 @@ void musicPlayerButtonsDraw() {
 
 void musicPlayerButtons() {
   if (mouseX>playPauseX && mouseX<playPauseX+playPauseWidth && mouseY>playPauseY && mouseY<playPauseY+playPauseHeight) {
+    click.play();
+    click.rewind();
     if ( song[currentSong].position() == song[currentSong].length() ) {//.length() = length of song/end of song
       song[currentSong].rewind();
       song[currentSong].play();
@@ -25,6 +27,8 @@ void musicPlayerButtons() {
     }
   }
   if (mouseX>backX && mouseX<backX+backWidth && mouseY>backY && mouseY<backY+backHeight) {
+    click.play();
+    click.rewind();
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
@@ -44,6 +48,8 @@ void musicPlayerButtons() {
     }
   }
   if (mouseX>nextX && mouseX<nextX+nextWidth && mouseY>nextY && mouseY<nextY+nextHeight) {
+    click.play();
+    click.rewind();
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();

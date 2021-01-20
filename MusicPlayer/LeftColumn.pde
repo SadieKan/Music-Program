@@ -7,14 +7,62 @@ void leftColumn() {
   rect(leftColumnX, leftColumnY, leftColumnWidth, height);
   fill(lightTeal);
   rect(leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeaderHeight);
-  fill(white);
-  fill(blueGray);
-  rect(leftColumnX, leftColumnY+height*5/60, leftColumnWidth, leftColumnHeight);
-  rect(leftColumnX, leftColumnY+height*16/60, leftColumnWidth, leftColumnHeight);
-  rect(leftColumnX, leftColumnY+height*27/60, leftColumnWidth, leftColumnHeight);
-  rect(leftColumnX, leftColumnY+height*38/60, leftColumnWidth, leftColumnHeight);
-  rect(leftColumnX, leftColumnY+height*49/60, leftColumnWidth, leftColumnHeight);
   reset();
+  if (currentSong == 0) {
+    border2();
+    fill(darkBlueGray);
+    rect(leftColumnX, leftColumnY+height*5/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  } else {
+    border2();
+    fill(blueGray);
+    rect(leftColumnX, leftColumnY+height*5/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  }
+  if (currentSong == 1) {
+    border2();
+    fill(darkBlueGray);
+    rect(leftColumnX, leftColumnY+height*16/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  } else {
+    border2();
+    fill(blueGray);
+    rect(leftColumnX, leftColumnY+height*16/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  }
+  if (currentSong == 2) {
+    border2();
+    fill(darkBlueGray);
+    rect(leftColumnX, leftColumnY+height*27/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  } else {
+    border2();
+    fill(blueGray);
+    rect(leftColumnX, leftColumnY+height*27/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  }
+  if (currentSong == 3) {
+    border2();
+    fill(darkBlueGray);
+    rect(leftColumnX, leftColumnY+height*38/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  } else {
+    border2();
+    fill(blueGray);
+    rect(leftColumnX, leftColumnY+height*38/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  }
+  if (currentSong == 4) {
+    border2();
+    fill(darkBlueGray);
+    rect(leftColumnX, leftColumnY+height*49/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  } else {
+    border2();
+    fill(blueGray);
+    rect(leftColumnX, leftColumnY+height*49/60, leftColumnWidth, leftColumnHeight);
+    reset();
+  }
   //Song Heading
   fill(darkGray);
   songHeadingText();
@@ -69,6 +117,8 @@ void leftColumn() {
 
 void leftColumnClicked() {
   if (mouseX>leftColumnX && mouseX<leftColumnX+leftColumnWidth && mouseY>leftColumnY+height*5/60 && mouseY<leftColumnY+height*5/60+leftColumnHeight) {
+    click.play();
+    click.rewind();
     if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
@@ -79,7 +129,9 @@ void leftColumnClicked() {
     }
   }
   if (mouseX>leftColumnX && mouseX<leftColumnX+leftColumnWidth && mouseY>leftColumnY+height*16/60 && mouseY<leftColumnY+height*16/60+leftColumnHeight) {
-    if (song[currentSong].isPlaying()) {
+    click.play();
+    click.rewind();
+      if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
       currentSong = 1;
@@ -89,7 +141,9 @@ void leftColumnClicked() {
     }
   }
   if (mouseX>leftColumnX && mouseX<leftColumnX+leftColumnWidth && mouseY>leftColumnY+height*27/60 && mouseY<leftColumnY+height*27/60+leftColumnHeight) {
-    if (song[currentSong].isPlaying()) {
+    click.play();
+    click.rewind();
+      if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
       currentSong = 2;
@@ -99,7 +153,9 @@ void leftColumnClicked() {
     }
   }
   if (mouseX>leftColumnX && mouseX<leftColumnX+leftColumnWidth && mouseY>leftColumnY+height*38/60 && mouseY<leftColumnY+height*38/60+leftColumnHeight) {
-    if (song[currentSong].isPlaying()) {
+    click.play();
+    click.rewind();
+      if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
       currentSong = 3;
@@ -109,7 +165,9 @@ void leftColumnClicked() {
     }
   }
   if (mouseX>leftColumnX && mouseX<leftColumnX+leftColumnWidth && mouseY>leftColumnY+height*49/60 && mouseY<leftColumnY+height*49/60+leftColumnHeight) {
-    if (song[currentSong].isPlaying()) {
+    click.play();
+    click.rewind();
+      if (song[currentSong].isPlaying()) {
       song[currentSong].pause();
       song[currentSong].rewind();
       currentSong = 4;

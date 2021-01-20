@@ -4,6 +4,7 @@ void songPlaying() {
   rect(songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
   reset();
 
+  //Image and Info for Current Song
   if (currentSong == 0) {
     image(pic1, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
   } else if (currentSong == 1) {
@@ -15,20 +16,23 @@ void songPlaying() {
   } else if (currentSong == 4) {
     image(pic5, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight);
   }
-
   songTitleText();
   fill(teal);
   songArtistText();
   reset();
-  
+
+
+  //Line to Show Time
   stroke(white);
   strokeWeight(2);
   line(songPlayingX, height*8/10, songPlayingX+songPlayingWidth, height*8/10);
   reset();
-
+  //
   for (int i = 0; i < song[currentSong].bufferSize() - 1; i++)
   {
   }
-  float posx = map(song[currentSong].position(), songPlayingX, song[currentSong].length(), songPlayingX, songPlayingX+songPlayingWidth);
+  float posx = map(song[currentSong].position(), songPlayingX, song[currentSong].length(), songPlayingX, songPlayingX+songPlayingWidth); //map(value, start1, stop1, start2, stop2);
+  stroke(white);
   ellipse(posx, height*8/10, 20, 20);
+  reset();
 }

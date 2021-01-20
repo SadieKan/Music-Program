@@ -3,7 +3,8 @@ void variablePopulation() {
   lightGray = #d0d5e2;
   lightTeal = #829eae;
   teal = #2f4550;
-  blueGray = #a2bdcc;
+  blueGray = #a3bdcc;
+  darkBlueGray = #9eaeb6;
   darkGray = #33393d;
 
   //Left Column
@@ -37,8 +38,8 @@ void variablePopulation() {
   pauseButton = loadImage ("../Images/pauseWhite.png"); //Dimensions: 300 Width, 300 Height
   nextButton = loadImage ("../Images/nextWhite.png"); //Dimensions: 300 Width, 300 Height
   backButton = loadImage ("../Images/backWhite.png"); //Dimensions: 300 Width, 300 Height
-  //
-  
+  shuffleButton = loadImage ("../Images/shuffleWhite.png"); //Dimensions: 300 Width, 300 Height
+  loopButton = loadImage ("../Images/loopWhite.png"); //Dimensions: 300 Width, 300 Height
   //
   playPauseX = songPlayingX+songPlayingWidth*20/45;
   playPauseY = height*34/40;
