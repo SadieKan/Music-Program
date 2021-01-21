@@ -1,3 +1,5 @@
+String songPlayedText = songPosition/1000/60 + ":" + ((songPosition/1000)-(songPosition/1000/60 *60));
+
 void songPlaying() {
   fill(black);
   rect(rightColumnX, 0, rightColumnWidth, height);
@@ -24,7 +26,7 @@ void songPlaying() {
 
   //Line to Show Time
   stroke(white);
-  strokeWeight(2);
+  strokeWeight(3);
   line(songPlayingX, height*8/10, songPlayingX+songPlayingWidth, height*8/10);
   reset();
   //
@@ -35,4 +37,13 @@ void songPlaying() {
   stroke(white);
   ellipse(posx, height*8/10, 20, 20);
   reset();
+  //
+  /*
+  rect(timeX, timeY, timeWidth, timeHeight);
+   rect(timeX2, timeY, timeWidth, timeHeight);
+   fill(black);
+   songPLayedTimeText();
+   songLengthText();
+   reset();
+   */
 }

@@ -1,4 +1,5 @@
 //Change the code for the buttons to function differently
+//currently working on shuffle
 //Sketch //Import Library //Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -15,6 +16,7 @@ AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; //meta data for
 AudioPlayer click;
 int loopIntNum = 1; //connect to variable button, increasing the loop number //loopIntNum+1 //loopIntNum+=
 int currentSong = numberOfSongs - numberOfSongs; //Formula based on previous variable //Computers start counting at 0
+int songPosition, songLength;
 //Visualizer
 FFT fft;
 AudioMetaData meta;
@@ -28,10 +30,11 @@ color black = #000000, white = #FFFFFF, lightGray, blueGray, lightTeal, teal, da
 PFont buttonFont;
 int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeight, leftColumnHeaderHeight;
-int rightColumnX, rightColumnWidth, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight;
+int rightColumnX, rightColumnWidth, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight, timeX, timeY, timeWidth, timeHeight, timeX2;
 int rewindX, rewindY, rewindWidth, rewindHeight, forwardX, forwardY, forwardWidth, forwardHeight, playPauseX, playPauseY, playPauseWidth, playPauseHeight;
 int nextX, nextY, nextWidth, nextHeight, backX, backY, backWidth, backHeight, shuffleX, shuffleY, shuffleWidth, shuffleHeight, loopX, loopY, loopWidth, loopHeight;
 PImage pic1, pic2, pic3, pic4, pic5, rewindButton, forwardButton, playButton, pauseButton, nextButton, backButton, shuffleButton, loopButton, shuffleButton2, loopButton2;
+Boolean shuffleOn=false, loopOn=false;
 
 void setup() {
   fullScreen(); //landscape
@@ -45,6 +48,8 @@ void draw() {
   songPlaying(); //display for the current song that is playing
   musicPlayerButtonsDraw();
   quitButton();
+  fill(white);
+  reset();
   visualizer(); //circle
 }
 
@@ -56,6 +61,10 @@ void mouseClicked() {
   quitButtonMouseClicked();
   leftColumnClicked();
   musicPlayerButtons();
+  if (mouseY > height*317/400 && mouseY < height*323/400) {
+    int position = int( map( mouseX, songPlayingX, songPlayingX+songPlayingWidth, 0, song[currentSong].length() ) );
+    song[currentSong].cue( position );
+  }
 }
 
 class BeatListener implements AudioListener

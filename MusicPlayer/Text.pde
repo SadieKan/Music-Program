@@ -91,3 +91,16 @@ void songArtistText() {
   textFont(buttonFont, 25);
   text(songMetaData[currentSong].author(), rightColumnX, height*35/48, rightColumnWidth, height);
 }
+
+/*
+void songPLayedTimeText() {
+  textAlign (CENTER, CENTER);
+  textFont(buttonFont, 25);
+  text(songPlayedText, timeX, timeY, timeWidth, timeHeight);
+}
+void songLengthText() {
+  textAlign (CENTER, CENTER);
+  textFont(buttonFont, 25);
+  text(songLengthText, timeX2, timeY, timeWidth, timeHeight);
+}
+*/

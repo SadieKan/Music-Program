@@ -1,4 +1,5 @@
 void visualizer() {
+  pushMatrix();
   translate(songPlayingX+songPlayingWidth*1/10, height*49/80);//where 0,0 is now
 
   //circle in center
@@ -20,7 +21,7 @@ void visualizer() {
 
   //circular visualizer
   int bsize = song[currentSong].bufferSize();
-    if (currentSong == 3) {
+  if (currentSong == 3) {
     stroke(black);
   } else {
     stroke(white);
@@ -34,6 +35,5 @@ void visualizer() {
     line(x, y, x2, y2);
   }
   reset();
-
-  translate(0, 0); //resets the translate
+  popMatrix();
 }

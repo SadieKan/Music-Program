@@ -29,6 +29,15 @@ void variablePopulation() {
   songPlayingY = height*1/9;
   songPlayingWidth = rightColumnWidth*2/4;
   songPlayingHeight = height*5/9;
+  //Time Display
+  //songMetaData[i].length()/1000/60, "minutes", (songMetaData[i].length()/1000)-(songMetaData[i].length()/1000/60 *60), "setimeX = songPlayingX-rightColumnWidth*4/50;
+  timeX = songPlayingX-rightColumnWidth*4/50;
+  timeX2 = songPlayingX+songPlayingWidth+rightColumnWidth*1/50;
+  timeY = height*39/50;
+  timeWidth = rightColumnWidth*3/50;
+  timeHeight = height*2/50;
+  songPosition = song[currentSong].position();
+  songLength = songMetaData[currentSong].length();
 
 
   //Music Controls

@@ -28,9 +28,13 @@ void musicPlayerButtonsDraw() {
 
 
   if ( song[currentSong].position() == song[currentSong].length() ) {//.length() = length of song/end of song
-    song[currentSong].rewind();
-    currentSong++;
-    song[currentSong].play();
+    if (shuffleOn == true) {
+      
+    } else {
+      song[currentSong].rewind();
+      currentSong++;
+      song[currentSong].play();
+    }
   }
 }
 
@@ -112,6 +116,14 @@ void musicPlayerButtons() {
   if (mouseX>shuffleX && mouseX<shuffleX+shuffleWidth && mouseY>shuffleY && mouseY<shuffleY+shuffleHeight) {
     click.play();
     click.rewind();
+    if (shuffleOn == true) {
+      shuffleOn = false;
+    } else if (shuffleOn == false && loopOn == true) {
+      loopOn=false;
+      shuffleOn = true;
+    } else {
+      shuffleOn = true;
+    }
   }
 
   if (mouseX>loopX && mouseX<loopX+loopWidth && mouseY>loopY && mouseY<loopY+loopHeight) {
