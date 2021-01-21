@@ -4,7 +4,7 @@ String quit= "X";
 void quitButton() {
   if (mouseX>quitButtonX && mouseX<quitButtonX+quitButtonWidth && mouseY>quitButtonY && mouseY<quitButtonY+quitButtonHeight) {
     border();
-    fill(lightGray);
+    fill(white);
     rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
     reset();
     fill(black);
@@ -15,7 +15,7 @@ void quitButton() {
     fill(black);
     rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
     reset();
-    fill(lightGray);
+    fill(white);
     quitButtonText();
     reset();
   }
