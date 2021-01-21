@@ -67,7 +67,8 @@ void leftColumn() {
   fill(darkGray);
   songHeadingText();
   reset();
-  //
+  
+  //Song Info and Picture
   fill(darkGray);
   song1Text();
   fill(teal);

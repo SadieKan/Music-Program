@@ -36,6 +36,7 @@ int nextX, nextY, nextWidth, nextHeight, backX, backY, backWidth, backHeight, sh
 PImage pic1, pic2, pic3, pic4, pic5, rewindButton, forwardButton, playButton, pauseButton, nextButton, backButton, shuffleButton, loopButton, shuffleButton2, loopButton2;
 Boolean shuffleOn=false, loopOn=false;
 
+
 void setup() {
   fullScreen(); //landscape
   minimSetup();
