@@ -14,7 +14,6 @@ void minimSetup() {
   songMetaData[3] = song[3].getMetaData();
   songMetaData[4] = song[4].getMetaData();
 
-
   //Beat Detection
   for ( int i=currentSong; i<numberOfSongs; i++) {
   fft = new FFT(song[i].bufferSize(), song[i].sampleRate());

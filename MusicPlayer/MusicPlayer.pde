@@ -1,5 +1,5 @@
-//Change the code for the buttons to function differently
 //currently working on shuffle
+//Click on the line under the artist name (right column) to change the position of the song
 //Sketch //Import Library //Minim
 import ddf.minim.*;
 import ddf.minim.analysis.*;
@@ -44,27 +44,33 @@ void setup() {
 }
 
 void draw() {
-  leftColumn();
+  //leftColumn();
   songPlaying(); //display for the current song that is playing
   musicPlayerButtonsDraw();
   quitButton();
-  fill(white);
-  reset();
   visualizer(); //circle
+  
+  
+  if ( song[currentSong].position() == song[currentSong].length() ) {
+    if (shuffleOn == true) {
+      song[currentSong].rewind();
+      currentSong = int(random(0, 5)); 
+      song[currentSong].play();
+    } else if (loopOn == true) {
+      song[currentSong].rewind();
+      song[currentSong].play();
+    } else {
+      song[currentSong].rewind();
+      currentSong ++; 
+      song[currentSong].play();
+    }
+  }
 }
-
-void keyPressed() {
-  musicPlayerDemo();
-} //End keyPressed
 
 void mouseClicked() {
   quitButtonMouseClicked();
   leftColumnClicked();
   musicPlayerButtons();
-  if (mouseY > height*317/400 && mouseY < height*323/400) {
-    int position = int( map( mouseX, songPlayingX, songPlayingX+songPlayingWidth, 0, song[currentSong].length() ) );
-    song[currentSong].cue( position );
-  }
 }
 
 class BeatListener implements AudioListener

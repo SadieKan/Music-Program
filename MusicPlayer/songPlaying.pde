@@ -1,4 +1,4 @@
-String songPlayedText = songPosition/1000/60 + ":" + ((songPosition/1000)-(songPosition/1000/60 *60));
+String songPlayedText = songPosition/1000/60 + ":" + ((songPosition/1000)-(songPosition/1000/60 *60)), songLengthText = songLength/1000/60 + ":" + ((songLength/1000)-(songLength/1000/60 *60));
 
 void songPlaying() {
   fill(black);
@@ -38,12 +38,8 @@ void songPlaying() {
   ellipse(posx, height*8/10, 20, 20);
   reset();
   //
-  /*
-  rect(timeX, timeY, timeWidth, timeHeight);
-   rect(timeX2, timeY, timeWidth, timeHeight);
-   fill(black);
-   songPLayedTimeText();
-   songLengthText();
-   reset();
-   */
+  fill(white);
+  //songPLayedTimeText();
+  //songLengthText();
+  reset();
 }
