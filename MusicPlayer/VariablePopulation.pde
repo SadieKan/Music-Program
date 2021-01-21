@@ -43,6 +43,16 @@ void variablePopulation() {
   shuffleButton2 = loadImage ("../Images/shuffleTeal.png"); //Dimensions: 300 Width, 300 Height
   loopButton2 = loadImage ("../Images/loopTeal.png"); //Dimensions: 300 Width, 300 Height
   //
+  rewindX = songPlayingX+songPlayingWidth*11/60;
+  rewindY = height*29/40;
+  rewindWidth = songPlayingWidth*5/60;
+  rewindHeight = rewindWidth;
+  //
+  forwardX = songPlayingX+songPlayingWidth*44/60;
+  forwardY = rewindY;
+  forwardWidth = songPlayingWidth*5/60;
+  forwardHeight = forwardWidth;
+  //
   playPauseX = songPlayingX+songPlayingWidth*20/45;
   playPauseY = height*34/40;
   playPauseWidth = songPlayingWidth*5/45;

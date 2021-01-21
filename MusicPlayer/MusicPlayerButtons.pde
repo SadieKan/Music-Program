@@ -1,4 +1,12 @@
 void musicPlayerButtonsDraw() {
+  //Rewind Button
+  //rect(rewindX, rewindY, rewindWidth, rewindHeight);
+  image(rewindButton, rewindX-songPlayingWidth/70, rewindY-songPlayingWidth*1/100, rewindWidth*32/25, rewindHeight*32/25);
+
+  //Forward Button
+  //rect(forwardX, forwardY, forwardWidth, forwardHeight);
+  image(forwardButton, forwardX-songPlayingWidth/70, forwardY-songPlayingWidth*1/100, forwardWidth*32/25, forwardHeight*32/25);
+
   //Play Pause Button
   if (song[currentSong].isPlaying()) {
     image(pauseButton, playPauseX-songPlayingWidth/60, playPauseY-songPlayingWidth*1/70, playPauseWidth*31/25, playPauseHeight*31/25);
@@ -17,23 +25,46 @@ void musicPlayerButtonsDraw() {
   //loop
   //rect(loopX, loopY, loopWidth, loopHeight);
   image(loopButton, loopX-songPlayingWidth/50, loopY-songPlayingWidth*1/26, loopWidth*32/25, loopWidth*32/25);
+
+
+  if ( song[currentSong].position() == song[currentSong].length() ) {//.length() = length of song/end of song
+    song[currentSong].rewind();
+    currentSong++;
+    song[currentSong].play();
+  }
 }
 
+
+
 void musicPlayerButtons() {
+  if (mouseX>rewindX && mouseX<rewindX+rewindWidth && mouseY>rewindY && mouseY<rewindY+rewindHeight) {
+    click.play();
+    click.rewind();
+    song[currentSong].skip(-10000); //10 seconds
+  }
+
+  if (mouseX>forwardX && mouseX<forwardX+forwardWidth && mouseY>forwardY && mouseY<forwardY+forwardHeight) {
+    click.play();
+    click.rewind();
+    song[currentSong].skip(10000); //10 seconds
+  }
+
   if (mouseX>playPauseX && mouseX<playPauseX+playPauseWidth && mouseY>playPauseY && mouseY<playPauseY+playPauseHeight) {
     click.play();
     click.rewind();
-    if ( song[currentSong].position() == song[currentSong].length() ) {//.length() = length of song/end of song
-      song[currentSong].rewind();
-      song[currentSong].play();
+    if (song[currentSong].isPlaying()) {
+      song[currentSong].pause();
     } else {
-      if (song[currentSong].isPlaying()) {
-        song[currentSong].pause();
+      if (song[currentSong].position() == song[currentSong].length()) {
+        song[currentSong].rewind();
+        song[currentSong].play();
+        println("song position end, playing song again");
       } else {
         song[currentSong].play();
       }
     }
   }
+
   if (mouseX>backX && mouseX<backX+backWidth && mouseY>backY && mouseY<backY+backHeight) {
     click.play();
     click.rewind();
@@ -55,6 +86,7 @@ void musicPlayerButtons() {
       }
     }
   }
+
   if (mouseX>nextX && mouseX<nextX+nextWidth && mouseY>nextY && mouseY<nextY+nextHeight) {
     click.play();
     click.rewind();
@@ -76,10 +108,12 @@ void musicPlayerButtons() {
       }
     }
   } 
+
   if (mouseX>shuffleX && mouseX<shuffleX+shuffleWidth && mouseY>shuffleY && mouseY<shuffleY+shuffleHeight) {
     click.play();
     click.rewind();
   }
+
   if (mouseX>loopX && mouseX<loopX+loopWidth && mouseY>loopY && mouseY<loopY+loopHeight) {
     click.play();
     click.rewind();

@@ -25,7 +25,7 @@ void visualizer() {
   } else {
     stroke(white);
   }
-  for (int i = 0; i < bsize - 1; i+=10) //5
+  for (int i = 0; i < bsize - 1; i+=10) //higher number = less lines around the circle
   {
     float x = ((r)*cos(i*2*PI/bsize))/5; //makes the start of the lines closer to the center
     float y = ((r)*sin(i*2*PI/bsize))/5;
@@ -35,5 +35,5 @@ void visualizer() {
   }
   reset();
 
-  translate(0, 0); //resets the translate at the top
+  translate(0, 0); //resets the translate
 }

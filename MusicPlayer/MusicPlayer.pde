@@ -29,7 +29,8 @@ PFont buttonFont;
 int quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int leftColumnX, leftColumnY, leftColumnWidth, leftColumnHeight, leftColumnHeaderHeight;
 int rightColumnX, rightColumnWidth, songPlayingX, songPlayingY, songPlayingWidth, songPlayingHeight;
-int playPauseX, playPauseY, playPauseWidth, playPauseHeight, nextX, nextY, nextWidth, nextHeight, backX, backY, backWidth, backHeight, shuffleX, shuffleY, shuffleWidth, shuffleHeight, loopX, loopY, loopWidth, loopHeight;
+int rewindX, rewindY, rewindWidth, rewindHeight, forwardX, forwardY, forwardWidth, forwardHeight, playPauseX, playPauseY, playPauseWidth, playPauseHeight;
+int nextX, nextY, nextWidth, nextHeight, backX, backY, backWidth, backHeight, shuffleX, shuffleY, shuffleWidth, shuffleHeight, loopX, loopY, loopWidth, loopHeight;
 PImage pic1, pic2, pic3, pic4, pic5, rewindButton, forwardButton, playButton, pauseButton, nextButton, backButton, shuffleButton, loopButton, shuffleButton2, loopButton2;
 
 void setup() {
