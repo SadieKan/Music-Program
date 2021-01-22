@@ -91,15 +91,27 @@ void songArtistText() {
   textFont(buttonFont, 25);
   text(songMetaData[currentSong].author(), rightColumnX, height*35/48, rightColumnWidth, height);
 }
-/*
-void songPLayedTimeText() {
+
+
+void songPlayedTimeText() {
   textAlign (CENTER, CENTER);
   textFont(buttonFont, 25);
-  text(songPlayedText, timeX, timeY, timeWidth, timeHeight);
+  text((song[currentSong].position()/1000)/60 + ":" + "0" + ((song[currentSong].position()/1000)-(song[currentSong].position()/1000/60 *60)), timeX, timeY, timeWidth, timeHeight);
 }
+
+void songPlayedTimeText2() {
+  textAlign (CENTER, CENTER);
+  textFont(buttonFont, 25);
+  text((song[currentSong].position()/1000)/60 + ":" + ((song[currentSong].position()/1000)-(song[currentSong].position()/1000/60 *60)), timeX, timeY, timeWidth, timeHeight);
+}
+
 void songLengthText() {
-  textAlign (CENTER, CENTER);
+  textAlign (CENTER, TOP);
   textFont(buttonFont, 25);
-  text(songLengthText, timeX2, timeY, timeWidth, timeHeight);
+  text((songMetaData[currentSong].length()/1000)/60 + ":" + "0" + ((songMetaData[currentSong].length()/1000)-(songMetaData[currentSong].length()/1000/60 *60)), timeX2, timeY, timeWidth, timeHeight);
 }
-*/
+void songLengthText2() {
+  textAlign (CENTER, TOP);
+  textFont(buttonFont, 25);
+  text((songMetaData[currentSong].length()/1000)/60 + ":" + ((songMetaData[currentSong].length()/1000)-(songMetaData[currentSong].length()/1000/60 *60)), timeX2, timeY, timeWidth, timeHeight);
+}

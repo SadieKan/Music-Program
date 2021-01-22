@@ -36,8 +36,6 @@ void variablePopulation() {
   timeY = height*39/50;
   timeWidth = rightColumnWidth*3/50;
   timeHeight = height*2/50;
-  songPosition = song[currentSong].position();
-  songLength = songMetaData[currentSong].length();
 
 
   //Music Controls

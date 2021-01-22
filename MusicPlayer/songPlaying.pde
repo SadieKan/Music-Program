@@ -1,5 +1,3 @@
-String songPlayedText = songPosition/1000/60 + ":" + ((songPosition/1000)-(songPosition/1000/60 *60)), songLengthText = songLength/1000/60 + ":" + ((songLength/1000)-(songLength/1000/60 *60));
-
 void songPlaying() {
   fill(black);
   rect(rightColumnX, 0, rightColumnWidth, height);
@@ -38,8 +36,42 @@ void songPlaying() {
   ellipse(posx, height*8/10, 20, 20);
   reset();
   //
-  fill(white);
-  //songPLayedTimeText();
-  //songLengthText();
-  reset();
+  if (((song[currentSong].position()/1000)-(song[currentSong].position()/1000/60 *60)) < 10) {
+    songPlayedTimeText();
+  } else if (((song[currentSong].position()/1000)-(song[currentSong].position()/1000/60 *60)) >= 10) {
+    songPlayedTimeText2();
+  }
+  //
+  if (((songMetaData[currentSong].length()/1000)-(songMetaData[currentSong].length()/1000/60 *60)) < 10) {
+    songLengthText();
+  } else if (((songMetaData[currentSong].length()/1000)-(songMetaData[currentSong].length()/1000/60 *60)) >= 10) {
+    songLengthText2();
+  }
+
+
+  //Automatically plays the next song after current song is over:
+  if ( song[currentSong].position() >= song[currentSong].length()-1000 ) {
+    if (shuffleOn == true) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      currentSong = int(random(0, 5)); 
+      song[currentSong].play();
+    } else if (loopOn == true) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      song[currentSong].play();
+    } else {
+      if (currentSong == 4) {
+        song[currentSong].pause();
+        song[currentSong].rewind();
+        currentSong = 0; 
+        song[currentSong].play();
+      } else {
+        song[currentSong].pause();
+        song[currentSong].rewind();
+        currentSong ++; 
+        song[currentSong].play();
+      }
+    }
+  }
 }

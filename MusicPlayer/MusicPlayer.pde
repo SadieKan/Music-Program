@@ -16,7 +16,6 @@ AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; //meta data for
 AudioPlayer click;
 int loopIntNum = 1; //connect to variable button, increasing the loop number //loopIntNum+1 //loopIntNum+=
 int currentSong = numberOfSongs - numberOfSongs; //Formula based on previous variable //Computers start counting at 0
-int songPosition, songLength;
 //Visualizer
 FFT fft;
 AudioMetaData meta;
@@ -50,21 +49,6 @@ void draw() {
   musicPlayerButtonsDraw();
   quitButton();
   visualizer(); //circle
-
-  if ( song[currentSong].position() == song[currentSong].length() ) {
-    if (shuffleOn == true) {
-      song[currentSong].rewind();
-      currentSong = int(random(0, 5)); 
-      song[currentSong].play();
-    } else if (loopOn == true) {
-      song[currentSong].rewind();
-      song[currentSong].play();
-    } else {
-      song[currentSong].rewind();
-      currentSong ++; 
-      song[currentSong].play();
-    }
-  }
 }
 
 void mouseClicked() {
